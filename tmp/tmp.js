@@ -15,6 +15,40 @@ document.addEventListener('DOMcontentLoaded', () => { });
 // document.addEventListener('ready', () => { });と同等 
 
 
+/* =======================================
+      jQuery
+======================================= */
+// #をつけないページ内リンク
+$('.header li a[href^="#"]').on('click', function(){
+	const href= $(this).attr("href");
+	const target = $(href == "#" || href == "" ? 'html' : href);
+	const position = target.offset().top;
+	$("html, body").animate({
+		scrollTop: position
+	}, 800, "swing");
+	return false;
+ });
+
+// タブ機能
+var a = 'active';
+$('#gradeTab div').on('click', function(){
+var index = $('#gradeTab div').index(this);
+$('#gradeTab div').removeClass(a);
+$('.tabContent_plugin').removeClass(a);
+$(this).addClass(a);
+$('.tabContent_plugin').eq(index).addClass(a);
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 
