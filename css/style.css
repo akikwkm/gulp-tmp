@@ -1,8 +1,157 @@
-h1 {
-  color: tomato;
-  margin: 0;
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Bungee+Hairline');
+/* =======================================
+      reset
+======================================= */
+ul {
+	padding: 0;
+	margin: 0;
+}
+li {
+	text-decoration: none;
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+img {
+  vertical-align: top;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* =======================================
+      common
+======================================= */
+* {
+  box-sizing: border-box;
+}
+body {
   padding: 0;
-  line-height: 100vh;
-  text-align: center; }
+  font: 100%/1.6 'Bungee Hairline', cursive, sans-serif;
+  padding: 0 1em;
+  /* fontsize（100%は16pxと同等）とline-heightを同時に設定 */
+}
+.clearfix { /* floatの親に当てる */
+  content: "";
+  display: table; /* or block */
+  clear: both;
+}
+.clearfix:before, .clearfix:after {
+  content:""; 
+  display: block;
+}
+.clearfix:after {
+  clear: both;
+}
+.container {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.TimesNewRoman {
+  font-family:"Times New Roman";
+}
+.mauto {
+  margin: 0 auto;
+}
+.tal {
+  text-align: left;
+}
+.tac {
+  text-align: center;
+}
+.tar {
+  text-align: right;
+}
+.w100 {
+  width: 100%;
+}
+.maxw100 {
+  max-width: 100%;
+}
+.ho:hover {
+  opacity: .8;
+}
+.for_pc {
+  display: block;
+}
+.for_sm {
+  display: none;
+}
+@media screen and (max-width: 680px){
+  .for_pc {
+    display: none;
+  }
+  .for_sm {
+    display: block;
+  }
+}
+/* =======================================
+      header
+======================================= */
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.header li {
+	float: left;
+	margin: 0 10px;
+}
+@media (max-width: 600px){
+	.header ul {
+		display: none;
+	}
+}
+@media (max-width: 960px){ /* iPhone6 */
+	.header ul {
+		display: flex;
+	}	
+}
 
-/*# sourceMappingURL=style.css.map */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

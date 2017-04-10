@@ -65,7 +65,8 @@ gulp.task('reload', function(){
 
 //監視下におく
 gulp.task('watchFile', function(){
-	gulp.watch('./scss/style.scss', ['compileSass', 'reload']);
+	// gulp.watch('./scss/style.scss', ['compileSass', 'reload']);
+	gulp.watch('./css/style.css', ['reload']);
 	gulp.watch('./js/main.js', ['concatScript', 'minifyScript', 'reload']);
 	gulp.watch('./*.html', ['reload']);
 });
